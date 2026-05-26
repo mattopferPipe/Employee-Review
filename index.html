@@ -14,12 +14,6 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#0f2f57">
 
-  <script>
-    setTimeout(function () {
-      window.location.href = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=0oJwgH5NfEu1B-9keMtcqpnsWoUqr0ZGkWvqEUbsW0JUNUVOVTczOVNOSUo5SkdQWjczNllRMU9UTC4u";
-    }, 1200);
-  </script>
-
   <style>
     body {
       margin: 0;
@@ -55,14 +49,30 @@
 
     p {
       font-size: 15px;
-      margin: 0 0 18px;
+      margin: 0 0 22px;
       color: #52606d;
     }
 
-    a {
-      color: #0f2f57;
+    button {
+      background: #0f2f57;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      font-size: 16px;
       font-weight: bold;
-      text-decoration: none;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #123d73;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #7b8794;
+      margin-top: 18px;
     }
   </style>
 </head>
@@ -71,10 +81,17 @@
   <div class="card">
     <img src="icon.png" alt="Employee Discipline Form Icon">
     <h1>Employee Discipline Form</h1>
-    <p>Opening form...</p>
-    <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=0oJwgH5NfEu1B-9keMtcqpnsWoUqr0ZGkWvqEUbsW0JUNUVOVTczOVNOSUo5SkdQWjczNllRMU9UTC4u">
-      Tap here if it does not open
-    </a>
+    <p>Tap the button below to open the Microsoft Form.</p>
+
+    <button onclick="openForm()">Open Form</button>
+
+    <p class="note">Add this page to your home screen before opening the form.</p>
   </div>
+
+  <script>
+    function openForm() {
+      window.location.href = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=0oJwgH5NfEu1B-9keMtcqpnsWoUqr0ZGkWvqEUbsW0JUNUVOVTczOVNOSUo5SkdQWjczNllRMU9UTC4u";
+    }
+  </script>
 </body>
 </html>
